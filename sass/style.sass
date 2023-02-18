@@ -1,0 +1,274 @@
+@import "normalize.scss"
+
+$text-color: #444240
+$second-text-color: #1B1A17
+$bg-color: #FDFDFB
+$font-title: "Playfair Display", sans-serif
+$font-text: "Prata", sans-serif
+
+@mixin nav-link
+  background-size: 100% 100%
+  background-repeat: no-repeat
+
+@mixin sub-title
+  font-family: $font-title
+  font-weight: 400
+  font-size: 32px
+  line-height: 43px
+  color: $second-text-color
+
+@mixin link-button
+  font-weight: 500
+  font-size: 12px
+  line-height: 14px
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: #ffffff
+  padding: 26px 38px
+
+@mixin line
+  background-image: url(../img/line.svg)
+  width: 50px
+  height: 3px
+  background-repeat: no-repeat
+
+body
+  font-family: "Roboto", sans-serif
+  font-size: 16px
+  line-height: 24px
+  color: $text-color
+  background-color: #ffffff
+
+a
+  text-decoration: none
+  margin: 0
+  padding: 0
+  color: inherit
+
+h1, h2, h3, h4, h5, p
+  margin: 0
+  padding: 0
+
+img
+  max-width: 100%
+  height: auto
+
+ul
+  list-style: none
+
+html
+  box-sizing: border-box
+
+*,
+*::after,
+*::before
+  box-sizing: inherit
+
+.visually-hidden
+  position: fixed
+  transform: scale(0)
+
+.container
+  max-width: 1266px
+  padding: 0 48px
+  margin: 0 auto
+
+.header
+  padding: 30px 0
+  background-color: $bg-color
+  &__navigation
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.main-nav ul,
+.user-nav ul
+  display: flex
+  flex-direction: row
+
+.main-nav__list
+  gap: 65px
+
+.user-nav__list
+  gap: 23px
+
+.user-nav__link
+  display: block
+  width: 19px
+  height: 16px
+  &_search
+    @include nav-link
+    background-image: url(../img/search.svg)
+  &_favorite
+    @include nav-link
+    background-image: url(../img/favs.svg)
+    position: relative
+  &_cart
+    @include nav-link
+    background-image: url(../img/cart.svg)
+
+/*единичка никак не хочет выравниваться по центру
+ сделал её через спан, а не псевдо, потому что потом
+ так её будет легче найти через JS чтобы выводить данные */
+.favs_count
+  width: 13px
+  height: 13px
+  position: absolute
+  font-size: 8px
+  top: -5px
+  right: -5px
+  background-color: #E6C8B4
+  border-radius: 50%
+  text-align: center
+
+.promo
+  background-color: $bg-color
+  max-height: 772px
+  background-image: url(../img/bg_promo.svg)
+  background-repeat: no-repeat
+  background-position-x: 53%
+  margin-bottom: 80px
+  &__container
+    display: flex
+  &__info
+    align-self: center
+    padding-left: 80px
+    margin-right: 150px
+  &__title
+    position: relative
+    font-family: $font-title
+    color: $second-text-color
+    font-weight: 400
+    font-size: 45px
+    line-height: 60px
+    margin-bottom: 16px
+    width: 343px
+    &::after
+      @include line
+      content: ''
+      position: absolute
+      top: calc(50% + 4px)
+      left: -65px
+  &__sub-title
+    font-family: $font-title
+    color: $second-text-color
+    font-weight: 400
+    font-size: 30px
+    line-height: 40px
+    margin-bottom: 39px
+  &__desc
+    font-weight: 300
+    font-size: 14px
+    line-height: 21px
+    max-width: 258px
+    margin-bottom: 64px
+  &__link
+    @include link-button
+    background-color: #444240
+  &__pic
+    position: relative
+  &__price
+    display: flex
+    position: absolute
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    font-family: $font-text
+    top: 138px
+    left: -75px
+    align-items: center
+    &_line
+      @include line
+      display: block
+      margin-left: 15px
+  &__characteristics
+    display: flex
+    position: absolute
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    font-family: $font-text
+    bottom: 145px
+    right: -75px
+    align-items: center
+    &_line
+      @include line
+      display: block
+      margin-right: 15px
+
+.popular
+  margin-bottom: 85px
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__title
+    @include sub-title
+  &__show-more
+    align-self: flex-end
+    font-weight: 500
+    line-height: 19px
+    padding-bottom: 12px
+    border-bottom: 1px solid #C4C0B6
+    margin-bottom: 25px
+  &__list
+    display: flex
+    justify-content: space-between
+    gap: 30px
+  &__item
+    background-color: $bg-color
+
+.card
+  display: flex
+  flex-direction: column
+  width: 370px
+  &__info
+    padding-top: 40px
+    padding-left: 40px
+  &__title
+    font-family: $font-title
+    font-weight: 700
+    font-size: 14px
+    line-height: 24px
+    letter-spacing: 0.03em
+    color: rgba(27, 26, 23, 0.82)
+  &__price
+    font-family: $font-text
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+    color: rgba(27, 26, 23, 0.82)
+  &__img
+    margin-bottom: 20px
+  &__link
+    position: relative
+    font-family: $font-title
+    color: $second-text-color
+    font-size: 16px
+    line-height: 21px
+    padding-left: 88px
+    padding-bottom: 40px
+    &:after
+      content: ''
+      position: absolute
+      background-image: url(../img/line.svg)
+      width: 30px
+      height: 3px
+      background-repeat: no-repeat
+      left: 40px
+      top: 12px
+
+//круглую рамку вокруг часов сделал так.
+//пытался сделать по нормальному, через бордер и градиент, не получилось
+.img_wrapper
+  align-self: center
+  background-image: url(../img/watch_border.svg)
+  background-repeat: no-repeat
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 315px
+  height: 315px
+  margin-bottom: 21px
