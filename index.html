@@ -125,61 +125,62 @@
         <section class="advantages">
             <div class="container advantages__container">
                 <h2 class="visually-hidden">Преимущества</h2>
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <div class="advantages__left">
-                            <img class="advantages__img" src="img/photo_banner.jpg" alt="Часы крупным планом"
-                                width="521" height="414">
-                        </div>
-                        <div class="advantages__right">
-                            <h3 class="advantages__title">Подлинное качество</h3>
-                            <p class="advantages__desc">Все часы производятся в Швейцарии и имеют сертификаты качества.
-                                Настоящие швейцарские часы — это предмет гордости и престижа.</p>
-                            <a class="advantages__link" href="#">Смотреть каталог</a>
-                        </div>
-                    </li>
-                </ul>
-                <div class="advantages__slider-control slider-control">
-                    <button class="advantages__button button" type="button">Предыдущий</button>
-                    <span class="slider-control__position">01</span>
-                    <button class="advantages__button button" type="button">Следующий</button>
+                <div class="advantages__slider">
+                    <div class="slider__card">
+                        <img class="advantages__img" src="img/photo_banner.jpg" alt="Часы крупным планом" width="521"
+                            height="414">
+                    </div>
+                    <div class="slider-control">
+                        <button class="slider-control__button slider-control__button_left" type="button"></button>
+                        <span class="slider-control__position">01</span>
+                        <button class="slider-control__button slider-control__button_right" type="button"></button>
+                    </div>
+                </div>
+                <div class="advantages__info">
+                    <h3 class="advantages__title">Подлинное качество</h3>
+                    <p class="advantages__desc">Все часы производятся в Швейцарии и имеют сертификаты качества.
+                        Настоящие швейцарские часы — это предмет гордости и престижа.</p>
+                    <a class="advantages__link" href="#">Смотреть каталог</a>
                 </div>
             </div>
         </section>
         <section class="social">
-            <div class="container">
+            <div class="container social__container">
                 <div class="social__info">
                     <h2 class="social__title">Следите за нашими новостями</h2>
                     <p class="social__desc">Подписывайтесь на <b>@conquest_watch</b> в соцсетях и узнавайте о новинках и
-                        акциях
-                        первыми.</p>
+                        акциях первыми.</p>
                     <ul class="social__icons">
-                        <li class="social__items"><a class="social__links" href="#">
-                                <img class="social__img" src="img/instagram_icon.svg" alt="Инстаграм"></a></li>
-                        <li class="social__items"><a class="social__links" href="#">
-                                <img class="social__img" src="img/facebook_icon.svg" alt="Фасебук"></a></li>
-                        <li class="social__items"><a class="social__links" href="#">
-                                <img class="social__img" src="img/twitter_icon.svg" alt="Птичник"></a></li>
+                        <li class="social__items">
+                            <a class="social__links" href="#">
+                                <img class="social__img" src="img/instagram_icon.svg" alt="Инстаграм">
+                            </a>
+                        </li>
+                        <li class="social__items">
+                            <a class="social__links" href="#">
+                                <img class="social__img" src="img/facebook_icon.svg" alt="Фасебук">
+                            </a>
+                        </li>
+                        <li class="social__items">
+                            <a class="social__links" href="#">
+                                <img class="social__img" src="img/twitter_icon.svg" alt="Птичник">
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="social__gallery">
-                    <ul class="social__photo">
-                        <li class="social__photo__item"><img class="social__photo__img" src="img/photo_1.jpg"
-                                alt="Феноменальное фото руки с часами">
-                        </li>
-                        <li class="social__photo__item"><img class="social__photo__img" src="img/photo_2.jpg"
-                                alt="Феноменальное фото часов">
-                        </li>
-                        <li class="social__photo__item"><img class="social__photo__img" src="img/photo_3.jpg"
-                                alt="Феноменальное фото руки с часами">
-                        </li>
-                    </ul>
+                    <img class="social__photo__img social__gallery_grid-a" src="img/photo_1.jpg"
+                        alt="Феноменальное фото руки с часами">
+                    <img class="social__photo__img social__gallery_grid-b" src="img/photo_2.jpg"
+                        alt="Феноменальное фото часов">
+                    <img class="social__photo__img social__gallery_grid-c" src="img/photo_3.jpg"
+                        alt="Феноменальное фото руки с часами">
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
+        <div class="container footer__container">
             <div class="footer__column contacts">
                 <ul class="footer-contacts">
                     <li class="footer-contacts__item">
@@ -213,7 +214,6 @@
                     <li class="footer-about__item">
                         <a class="footer-about__link" href="#">Отзывы</a>
                     </li>
-
                 </ul>
             </div>
             <div class="footer__column">
@@ -233,7 +233,6 @@
                     <li class="footer-about__item">
                         <a class="footer-about__link" href="#">Корпоративным клиентам</a>
                     </li>
-
                 </ul>
             </div>
             <div class="footer__column">
@@ -253,12 +252,10 @@
                     <li class="footer-about__item">
                         <a class="footer-about__link" href="#">Возврат и компенсация</a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </footer>
-
 
 </body>
 
